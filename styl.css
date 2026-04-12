@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+}
+h2
+
+
+/* HEADER */
+header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(15, 12, 12);
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    background: url('images/bg.avif') center/cover no-repeat;
+    height: 100vh;
+}
+
+.overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: orange;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff6600;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* SERVICES */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color:rgb(12, 209, 199);
+}
+#residential{
+    background-image: url(images/residential.avif);
+}
+#renovation{
+    background-image: url(images/renovation.avif);
+}
+#commercial{
+    background-image: url(images/commercial.avif);
+}
+#design{
+    background-image: url(images/design.avif);
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* PROJECTS */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+}
+
+/* CONTACT */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+form input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #ff6600;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay h1 {
+        font-size: 35px;
+    }
+}
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text ul {
+    margin-top: 10px;
+}
+
+.about-text li {
+    margin-bottom: 5px;
+}
+
+.about-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat {
+    background: orange;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section-intro {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.service ul {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.project-info p {
+    font-size: 14px;
+}
