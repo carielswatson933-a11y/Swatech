@@ -44,7 +44,7 @@ nav ul li a {
 
 /* HERO */
 .hero {
-    background: url('images/bg.avif') center/cover no-repeat;
+    background: url('bg.avif') center/cover no-repeat;
     height: 100vh;
 }
 
@@ -106,16 +106,16 @@ section {
     color:rgb(12, 209, 199);
 }
 #residential{
-    background-image: url(images/residential.avif);
+    background-image: url('residential.avif');
 }
 #renovation{
-    background-image: url(images/renovation.avif);
+    background-image: url('renovation.avif');
 }
 #commercial{
-    background-image: url(images/commercial.avif);
+    background-image: url('commercial.avif');
 }
 #design{
-    background-image: url(images/design.avif);
+    background-image: url('design.avif');
 }
 
 .service:hover {
